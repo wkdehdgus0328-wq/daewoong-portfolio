@@ -1,595 +1,141 @@
-<!doctype html>
-<html lang="ko" class="scroll-smooth">
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>장동현 | DAEWOONG HEALTHCARE B2B Sales / Inbound Marketing Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장동현 | 코스맥스 전략마케팅 포트폴리오 초대장</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 
         :root {
-            --sk-black: #000000;
+            --sk-navy: #0A225F;
             --sk-white: #FFFFFF;
             --sk-grey: #F5F5F5;
             --sk-border: #EEEEEE;
         }
 
         body {
-            font-family: "Pretendard", sans-serif;
+            font-family: "Pretendard", "Inter", sans-serif;
             background-color: var(--sk-white);
-            color: var(--sk-black);
-            letter-spacing: -0.03em;
+            color: var(--sk-navy);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
-        .font-inter {
-            font-family: "Inter", sans-serif;
-            letter-spacing: 0.05em;
+        .grid-texture {
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: linear-gradient(var(--sk-navy) 1px, transparent 1px), 
+                              linear-gradient(90deg, var(--sk-navy) 1px, transparent 1px);
+            background-size: 60px 60px;
         }
 
-        .text-accent {
-            color: var(--sk-black);
+        .bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(10, 34, 95, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
         }
 
-        .bg-accent {
-            background-color: var(--sk-black);
+        .cta-button {
+            background-color: var(--sk-navy);
+            color: white;
+            font-weight: 800;
+            padding: 1.2rem 3rem;
+            border-radius: 0px; /* Matching the portfolio's sharp corners */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px -10px rgba(10, 34, 95, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            border: 1px solid var(--sk-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 13px;
         }
 
-        .border-accent {
-            border-color: var(--sk-black);
+        .cta-button:hover {
+            background-color: white;
+            color: var(--sk-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px -12px rgba(10, 34, 95, 0.4);
         }
 
-        .cyber-card {
-            background: var(--sk-white);
+        .cyber-border {
             border: 1px solid var(--sk-border);
-            transition: all 0.3s ease;
-            box-shadow: none;
+            padding: 4rem;
+            position: relative;
+            background: white;
         }
-
-        .cyber-card:hover {
-            border-color: var(--sk-black);
-            transform: translateY(-2px);
-        }
-
-        .accordion-content {
-            display: grid;
-            grid-template-rows: 0fr;
-            transition: grid-template-rows 0.3s ease-in-out;
-        }
-
-        .accordion-content>div {
-            overflow: hidden;
-        }
-
-        .accordion-item.active .accordion-content {
-            grid-template-rows: 1fr;
-        }
-
-        .accordion-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-item.active .accordion-icon {
-            transform: rotate(180deg);
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--sk-grey);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #CCCCCC;
-            border-radius: 0px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--sk-black);
-        }
-
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .section-padding {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-
-        .sk-border {
-            border-color: var(--sk-border);
+        
+        .corner-accent {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 2px solid var(--sk-navy);
         }
     </style>
 </head>
+<body class="antialiased selection:bg-[#0A225F] selection:text-white">
+    <div class="relative flex min-h-screen items-center justify-center px-6 py-12 bg-[#F9FAFB]">
+        <div class="grid-texture"></div>
+        <div class="bg-glow"></div>
 
-<body class="antialiased selection:bg-[#F37321] selection:text-white">
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-inter font-extrabold text-xl tracking-tight text-black uppercase">Donghyun <span
-                    class="text-accent underline decoration-1 underline-offset-4">Jang</span></span>
-            <div
-                class="hidden md:flex space-x-8 text-[10px] font-inter tracking-[0.2em] text-gray-400 font-bold uppercase">
-                <a href="#intro" class="hover:text-[#F37321] transition">01. Intro</a>
-                <a href="#crm" class="hover:text-[#F37321] transition">02. B2B CRM & Inbound</a>
-                <a href="#frontline" class="hover:text-[#F37321] transition">03. O2O Sales Pipeline</a>
-                <a href="#ai-ops" class="hover:text-[#F37321] transition">04. AI Automation</a>
-                <a href="#archive" class="hover:text-[#F37321] transition">05. Safety Net</a>
-            </div>
-        </div>
-    </nav>
+        <div class="relative z-10 flex w-full max-w-[800px] flex-col items-center">
+            <div class="cyber-border w-full flex flex-col items-center text-center gap-14 shadow-sm">
+                <!-- Decorative Corners -->
+                <div class="corner-accent top-0 left-0 border-r-0 border-b-0"></div>
+                <div class="corner-accent top-0 right-0 border-l-0 border-b-0"></div>
+                <div class="corner-accent bottom-0 left-0 border-r-0 border-t-0"></div>
+                <div class="corner-accent bottom-0 right-0 border-l-0 border-t-0"></div>
 
-    <section id="intro"
-        class="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center border-b border-gray-100">
-        <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-            <div
-                class="w-48 h-48 md:w-72 md:h-72 flex-shrink-0 overflow-hidden border border-gray-100 sk-border rounded-none p-1 bg-white relative">
-                <img src="./assets/profile.jpg" class="w-full h-full object-cover transition duration-700"
-                    alt="프로필 사진" />
-            </div>
+                <header class="flex flex-col items-center gap-4">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">
+                        Strategic Marketing Portfolio Invitation
+                    </span>
+                    <h1 class="text-xl font-bold tracking-tight text-black sm:text-2xl font-inter uppercase">
+                        Donghyun Jang&ensp;|&ensp;코스맥스 전략마케팅
+                    </h1>
+                </header>
 
-            <div class="flex-1 space-y-8">
-                <div
-                    class="inline-block px-3 py-1 bg-[#F37321] text-white text-[9px] font-inter font-bold tracking-[0.3em] uppercase mb-2">
-                    DAEWOONG HEALTHCARE B2B SALES / INBOUND MARKETING CANDIDATE
-                </div>
+                <section class="flex flex-col items-center gap-10">
+                    <h2 class="text-3xl font-extrabold leading-tight tracking-tighter text-black sm:text-4xl md:text-5xl break-keep">
+                        데이터 기반 브랜드 전략과<br />
+                        <span class="text-[#0A225F]">글로벌 OBM 비즈니스</span>를 위해,<br />
+                        코스맥스의 새로운&nbsp;
+                        <span class="text-[#0A225F]">성장 모멘텀을 제안합니다</span>.
+                    </h2>
 
-                <h1
-                    class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-black leading-[1.1] tracking-tighter break-keep">
-                    팝업 공해를 막고 정밀 코호트 타겟팅으로,<br />
-                    대웅헬스케어의 <span class="underline decoration-1 underline-offset-8 decoration-[#F37321]">B2B 영업 파이프라인</span>을 가속합니다.
-                </h1>
+                    <p class="max-w-[580px] text-sm leading-relaxed text-gray-500 sm:text-base break-keep font-light">
+                    본 인비테이션은 코스맥스 전략마케팅 직무 지원을 위해 특별 제작된 인터랙티브 포트폴리오 초대장입니다. 데이터 구조 기반의 자동화 엔진(PickPilot)과 글로벌 현장 VOC 자산화 성과를 생생하게 확인하실 수 있도록 웹 전용 시스템으로 구성하였습니다.
+                    </p>
+                </section>
 
-                <p class="text-xl text-gray-600 leading-relaxed max-w-2xl font-light break-keep">
-                    단순한 웰니스 혜택 나열이 아닌, 데이터 기반의 논리적 리드 타겟팅이 필요합니다. 40여 개 브랜드의 이탈률을 12.5%p 방어하고, O2O 유효 파이프라인 1.2k 증대를 이끌어낸 검증된 노하우로 기업 맞춤형 인바운드 마케팅 효율을 극대화하는 마케터 장동현입니다.
-                </p>
-
-                <div
-                    class="flex items-center gap-6 text-[10px] font-bold text-gray-400 pt-4 font-inter tracking-[0.2em] uppercase">
-                    <span class="text-black">B2B Sales Pipeline</span>
-                    <span class="w-1 h-1 bg-[#F37321] rounded-full"></span>
-                    <span class="text-black">Data-Driven CRM</span>
-                    <span class="w-1 h-1 bg-[#F37321] rounded-full"></span>
-                    <span class="text-black">AI Automation</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="crm" class="py-24 px-6 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
-                <div>
-                    <span class="text-[#F37321] font-inter font-bold text-[9px] tracking-[0.3em] block mb-3 uppercase">02. B2B CRM & Funnel Optimization</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-black tracking-tighter">행동 데이터 기반 온사이트 세그먼테이션 및 세일즈 파이프라인 최적화</h2>
-                    <p class="text-gray-600 mt-6 max-w-3xl text-sm leading-relaxed font-light break-keep">
-                        기업 HR/EHS 담당자를 설득하기 위해서는 치밀한 퍼널 설계가 필수적입니다. 40여 개 브랜드의 CRM 솔루션을 총괄하며 기업 대상 맞춤형 운영 가이드를 확립했습니다.
+                <div class="flex flex-col items-center gap-6">
+                    <a href="https://wkdehdgus0328-wq.github.io/cosmax-marketing-portfolio/" target="_blank" class="cta-button group">
+                        <span class="transition-transform group-hover:scale-110">🔗</span>
+                        <span>코스맥스 전략마케팅 포트폴리오 바로가기</span>
+                    </a>
+                    <p class="text-[10px] text-gray-400 font-inter tracking-widest uppercase">
+                        Click the button above to enter the full experience
                     </p>
                 </div>
             </div>
-
-            <div class="space-y-12">
-                <div
-                    class="cyber-card flex flex-col md:flex-row border border-gray-100 overflow-hidden bg-white sk-border mb-12">
-                    <div
-                        class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-r border-gray-100 bg-gray-50 grid grid-cols-2 gap-px">
-                        <div
-                            class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                            <img src="./assets/img-crm-beauty-r.png"
-                                class="w-full h-full object-contain transition duration-700" alt="CRM Data 1" />
-                        </div>
-                        <div
-                            class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                            <img src="./assets/img-crm-beauty-r2.jpg"
-                                class="w-full h-full object-contain transition duration-700" alt="CRM Data 2" />
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center">
-                        <h3 class="font-bold text-2xl text-black mb-6 tracking-tight">코호트 기반 초개인화 타겟팅 및 피로도 제어
-                            <span class="block text-[10px] text-gray-400 font-inter mt-3 font-normal uppercase tracking-[0.2em]">Beauty R사 Case Study</span>
-                        </h3>
-                        <div class="space-y-6 text-sm text-gray-600 font-light leading-relaxed">
-                            <p><strong class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Problem:</strong>
-                                단기 전환율에 급급한 일괄 푸시 발송으로 타겟 고객의 피로도 누적 및 이탈률 증가.</p>
-                            <p><strong class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Action:</strong>
-                                단순 인구통계가 아닌 진성, 관심, 이탈 3개 코호트로 고객군을 정밀 분류했습니다. 이에 맞춰 타겟 고객의 피로도를 제어하는 '피로도 3일 캡(Cap)' 정책을 전격 도입하고, 발송 시나리오를 타겟 특성에 맞춰 재배치했습니다.</p>
-                            <p class="pt-4 border-t border-gray-100"><strong class="text-black block mb-2 font-inter tracking-[0.1em] text-[11px] uppercase">Result:</strong>
-                                캠페인 클릭률 400% 증가 및 ROAS 985% 상승 달성으로 CRM 파이프라인 효율 극대화.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="cyber-card flex flex-col md:flex-row-reverse border border-gray-100 overflow-hidden bg-white sk-border mb-12">
-                    <div
-                        class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-l border-gray-100 bg-gray-50 flex flex-col gap-px">
-                        <div class="grid grid-cols-2 gap-px flex-1">
-                            <div
-                                class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2 h-full">
-                                <img src="./assets/img-crm-fashion-l.png"
-                                    class="w-full h-full object-contain transition duration-700" alt="Fashion L사 CRM 1" />
-                            </div>
-                            <div
-                                class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2 h-full">
-                                <img src="./assets/img-crm-health-g.png"
-                                    class="w-full h-full object-contain transition duration-700" alt="Health G CRM" />
-                            </div>
-                        </div>
-                        <div class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2 flex-1 border-t border-gray-100">
-                            <img src="./assets/img-crm-fashion-l2.jpg"
-                                class="w-full h-[150px] md:h-full object-contain transition duration-700" alt="Fashion L사 CRM 2" />
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center">
-                        <h3 class="font-bold text-2xl text-black mb-6 tracking-tight">이탈 방어 트리거 기반 3단계 넛지(Nudge) 기획
-                            <span class="block text-[10px] text-gray-400 font-inter mt-3 font-normal uppercase tracking-[0.2em]">Fashion & Vegan Beauty Case Study</span>
-                        </h3>
-                        <div class="space-y-6 text-sm text-gray-600 font-light leading-relaxed">
-                            <p><strong class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Problem:</strong>
-                                신규 유입은 높으나 장바구니 및 결제창 등 핵심 전환 접점에서의 이탈률(60%) 심화.</p>
-                            <p><strong class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Action:</strong>
-                                화면을 가리는 팝업 공해를 전면 차단하고, 이탈 직전의 찰나를 캐치하는 조건부 트리거 기반 3단계 넛지(Nudge) 시나리오를 설계했습니다.</p>
-                            <p class="pt-4 border-t border-gray-100"><strong class="text-black block mb-2 font-inter tracking-[0.1em] text-[11px] uppercase">Result:</strong>
-                                핵심 접점 미구매 이탈률 60% → 47.5% 대폭 완화(-12.5%p) 및 타겟 재구매율 8% 상승.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+            
+            <footer class="mt-12 text-[10px] text-gray-400 font-inter tracking-[0.2em] uppercase">
+                &copy; 2026 DONGHYUN JANG. COSMAX STRATEGIC MARKETING.
+            </footer>
         </div>
-    </section>
-
-    <section id="frontline" class="py-24 px-6 max-w-7xl mx-auto border-b border-gray-100 bg-white">
-        <div class="mb-16">
-            <span class="text-[#F37321] font-inter font-bold text-[9px] tracking-[0.3em] block mb-3 uppercase">03. O2O Sales Pipeline & Operation</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-black tracking-tighter">
-                인바운드 리드 데이터 자산화 및 다부서 협업 체계 구축
-            </h2>
-            <p class="text-gray-600 mt-6 max-w-2xl text-sm leading-relaxed font-light break-keep">
-                오프라인 현장의 파편화된 데이터를 통합해 유효한 영업 기회로 연결합니다. 기획, 디자인, 영업 등 타 직군과 명확하게 소통하며 O2O 파이프라인을 구축합니다.
-            </p>
-        </div>
-
-        <div class="space-y-8">
-            <div class="cyber-card flex flex-col md:flex-row border border-gray-100 overflow-hidden bg-white sk-border">
-                <div
-                    class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-r border-gray-100 bg-gray-50 grid grid-cols-2 gap-px">
-                    <div
-                        class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                        <img src="./assets/stanley-ref-1.jpg"
-                            class="w-full h-full object-contain transition duration-700" alt="스탠리 프로모션 기획안" />
-                    </div>
-                    <div
-                        class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                        <img src="./assets/stanley-ref-2.jpg" class="w-full h-full object-cover transition duration-700"
-                            alt="스탠리 데모존 현장" />
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center">
-                    <h3 class="font-bold text-2xl text-black border-l-4 border-[#F37321] pl-5 tracking-tight mb-6">
-                        인바운드 VOC 데이터 자산화 및 O2O 세일즈 파이프라인 기획
-                        <span class="block text-[10px] text-gray-400 font-inter mt-3 font-normal uppercase tracking-[0.2em]">스탠리 블랙앤데커 디월트 체험센터</span>
-                    </h3>
-                    <div class="space-y-6 text-sm text-gray-600 font-light leading-relaxed">
-                        <p><strong class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Action:</strong>
-                            수기로 관리되던 내방 고객 VOC를 전면 디지털화하여 핵심 니즈를 추출했습니다. 이를 결합한 O2O 우드 무드등 코워크 캠페인 기획서를 작성하고 벤더사 및 임원진과의 미팅을 직접 리딩했습니다.</p>
-                        <p class="pt-4 border-t border-gray-100"><strong class="text-black block mb-2 font-inter tracking-[0.1em] text-[11px] uppercase">Result:</strong>
-                            타겟 도달률 34% 증가 및 신규 유효 파이프라인 1.2k 증대 달성.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="cyber-card flex flex-col md:flex-row-reverse border border-gray-100 overflow-hidden bg-white sk-border">
-                <div
-                    class="w-full md:w-1/2 h-80 md:h-auto border-b md:border-b-0 md:border-l border-gray-100 bg-gray-50 grid grid-cols-2 gap-px">
-                    <div
-                        class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                        <img src="./assets/ikea-ref-1.jpg" class="w-full h-full object-contain transition duration-700"
-                            alt="IKEA 직원증" />
-                    </div>
-                    <div
-                        class="relative group cursor-pointer overflow-hidden bg-white flex items-center justify-center p-2">
-                        <img src="./assets/ikea-ref-2.jpg" class="w-full h-full object-cover transition duration-700"
-                            alt="IKEA 매장 현장" />
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center">
-                    <h3 class="font-bold text-2xl text-black border-l-4 border-black pl-5 tracking-tight mb-6">
-                        물류 오퍼레이션 및 자원 시스템화
-                        <span
-                            class="block text-[10px] text-gray-400 font-inter mt-3 font-normal uppercase tracking-[0.2em]">캐나다
-                            이케아 (IKEA Canada)</span>
-                    </h3>
-                    <div class="space-y-6 text-sm text-gray-600 font-light leading-relaxed">
-                        <p><strong
-                                class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Action:</strong>
-                            글로벌 리테일 환경에서 비효율적 물류 동선을 파악하고, 모호한 재고 보충 기준을 누구나 직관적으로 인지할 수 있는 <strong>'물리적 기준선(Red
-                                Line)'</strong>으로 단독 제안 및 시각화했습니다.</p>
-                        <p class="pt-4 border-t border-gray-100"><strong class="text-black block mb-2 font-inter tracking-[0.1em] text-[11px] uppercase">Result:</strong>
-                            관리자의 불필요한 현장 확인 동선 100% 제거. 대웅헬스케어와 같은 대규모 B2B 리드 관리 환경에서 빠르고 유연한 자원 운영에 기여합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-ops" class="py-24 px-6 border-b border-gray-100 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <span class="text-[#F37321] font-inter font-bold text-[9px] tracking-[0.3em] block mb-3 uppercase">04. AI-Driven Automation</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-black mb-6 tracking-tighter">
-                    AI 툴을 활용한 B2B 시장 분석 리드타임 단축 및 무인화
-                </h2>
-                <p class="text-gray-600 max-w-3xl text-sm leading-relaxed font-light">
-                    수작업 리서치의 병목을 해결하고 대규모 인바운드 환경에서 발생할 수 있는 오분류 리스크를 AI 기반 시스템적 안전망으로 사전 차단합니다.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                <div class="cyber-card p-8 md:p-10 flex flex-col h-full bg-white sk-border">
-                    <h3 class="text-xl font-bold text-black mb-2 flex justify-between items-center tracking-tight">
-                        마케팅 트렌드 무인 분석 파이프라인 (PickPilot)
-                        <span
-                            class="text-[9px] font-inter text-gray-400 border border-gray-100 px-2 py-1 uppercase tracking-wider">Productivity</span>
-                    </h3>
-                    <p
-                        class="text-black text-[10px] font-inter font-bold tracking-[0.2em] uppercase mb-4 border-b border-gray-100 pb-4">
-                        Agentic Workflow & API Automation
-                    </p>
-                    <div class="bg-gray-50 border border-gray-100 p-5 mb-8 rounded-none space-y-3 text-[13px] text-gray-600 font-light">
-                        <p><strong class="text-black font-inter tracking-wider uppercase text-[11px]">Action:</strong>
-                            리테일 시장 조사 수작업 낭비를 줄이고자 외부 API와 LLM 연동. n8n 구축 중 JSON 데이터 타입 충돌로 인한 치명적 연쇄 에러(초록불의 배신)를 통짜 워크플로우 모듈화와 AI 기획 Context 주입으로 돌파.</p>
-                        <p class="pt-3 border-t border-gray-200"><strong class="text-black font-inter tracking-wider uppercase text-[11px]">Impact:</strong>
-                            시스템 1회 구동 수준으로 리드타임 85% 단축. 대웅헬스케어의 타겟 기업 니즈 리서치 및 맞춤형 솔루션 제안 속도를 압도적으로 높일 수 있음을 증명합니다.</p>
-                    </div>
-                    <div class="mb-8">
-                        <h4 class="text-[11px] font-bold text-black mb-4 border-l-2 border-[#F37321] pl-3 uppercase tracking-widest">
-                            MCP-Based Agentic Architecture
-                        </h4>
-                        <div
-                            class="bg-white border border-gray-100 p-1 rounded-none relative group cursor-pointer overflow-hidden sk-border">
-                            <img src="./assets/pickpilot-main.png"
-                                class="w-full h-auto object-cover transition duration-700"
-                                alt="PickPilot Architecture" />
-                        </div>
-                        <p
-                            class="mt-4 text-[13px] text-gray-500 leading-relaxed bg-gray-50 p-4 border-l-2 border-gray-200 font-light">
-                            단순 매크로(RPA)를 넘어, MCP 서버 기반 에이전트가 API를 직접 제어하며 <strong class="text-black">[데이터 수집 ➔ AI 가공 ➔
-                                콘텐츠 렌더링]</strong>을 자율 수행합니다.
-                        </p>
-                    </div>
-                    <div class="mb-6">
-                        <h4 class="text-[11px] font-bold text-black mb-4 border-l-2 border-[#F37321] pl-3 uppercase tracking-widest">
-                            Output Examples
-                        </h4>
-                        <div class="grid grid-cols-2 gap-2 h-24 md:h-32">
-                            <div
-                                class="h-full border border-gray-100 bg-gray-50 relative group cursor-pointer overflow-hidden">
-                                <img src="./assets/pickpilot5.jpg"
-                                    class="w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
-                                    alt="PickPilot Result 1" />
-                            </div>
-                            <div
-                                class="h-full border border-gray-100 bg-gray-50 relative group cursor-pointer overflow-hidden">
-                                <img src="./assets/pickpilot6.jpg"
-                                    class="w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-300"
-                                    alt="PickPilot Result 2" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="cyber-card p-8 md:p-10 flex flex-col justify-center relative overflow-hidden h-full bg-white">
-                    <div
-                        class="absolute -right-10 -top-10 text-[120px] font-inter font-black text-gray-50 pointer-events-none uppercase">
-                        AI
-                    </div>
-                    <h3
-                        class="text-xl font-bold text-black mb-2 flex justify-between items-center relative z-10 tracking-tight">
-                        RAG 기반 VOC 분류 자동화 및 리스크 방어
-                        <span
-                            class="text-[9px] font-inter text-gray-400 border border-gray-100 px-2 py-1 uppercase tracking-wider">Data
-                            Routing</span>
-                    </h3>
-                    <p
-                        class="text-black text-[10px] font-inter font-bold tracking-[0.2em] uppercase mb-6 border-b border-gray-100 pb-4 relative z-10">
-                        Zero-touch Operations
-                    </p>
-
-                    <div class="bg-gray-50 border border-gray-100 p-5 text-[13px] relative z-10 mb-8 rounded-none font-light text-gray-600">
-                        <p class="mb-3">
-                            <strong class="text-black font-inter tracking-wider uppercase text-[11px]">Background & Goal:</strong>
-                            대규모 인바운드 VOC 전면 무인화 시 발생할 수 있는 AI의 치명적 오분류(리콜, 분쟁 등) 리스크를 100% 차단하기 위한 하이브리드 RAG 설계.
-                        </p>
-                        <p class="pt-3 border-t border-gray-200">
-                            <strong class="text-black font-inter tracking-wider uppercase text-[11px]">Impact:</strong>
-                            수작업 3일 소요되던 업무를 30분 내 Zero-touch 분류로 단축. 대웅헬스케어의 대규모 기업 고객 문의 분류 체계화 및 리스크 원천 차단에 즉시 적용 가능합니다.
-                        </p>
-                    </div>
-
-                    <div class="mb-8 relative z-10">
-                        <div
-                            class="border border-gray-100 bg-white overflow-hidden group cursor-pointer relative sk-border">
-                            <img src="./assets/ai-voc-2.png" class="w-full h-auto object-cover transition duration-700"
-                                alt="n8n 메인 파이프라인 아키텍처" />
-                        </div>
-                        <p class="text-center text-[10px] text-gray-400 mt-3 font-inter tracking-widest uppercase">n8n &
-                            LLM 기반 VOC 라우팅 오케스트레이션 설계</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                        <div class="flex flex-col gap-4">
-                            <div
-                                class="h-32 border border-gray-100 bg-white overflow-hidden group cursor-pointer relative rounded-none sk-border">
-                                <img src="./assets/ai-voc-1.png"
-                                    class="w-full h-full object-contain transition duration-500"
-                                    alt="Step 1: Data Extraction" />
-                            </div>
-                            <div>
-                                <strong
-                                    class="text-black block mb-2 text-[10px] font-inter uppercase tracking-widest border-l-2 border-black pl-3">[STEP
-                                    1] Data Extract</strong>
-                                <p class="text-[12px] text-gray-500 leading-tight font-light">VOC 데이터 임베딩 및 Supabase 적재를
-                                    통한 기초 데이터 구조화.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-4">
-                            <div
-                                class="h-32 border border-gray-100 bg-white overflow-hidden group cursor-pointer relative rounded-none sk-border">
-                                <img src="./assets/ai-voc-4.png"
-                                    class="w-full h-full object-contain transition duration-500"
-                                    alt="Step 2: AI Intelligence" />
-                            </div>
-                            <div>
-                                <strong
-                                    class="text-black block mb-2 text-[10px] font-inter uppercase tracking-widest border-l-2 border-black pl-3">[Step
-                                    2] AI Intelligence</strong>
-                                <p class="text-[12px] text-gray-500 leading-tight font-light">보수적인 Temperature 세팅으로 객관성
-                                    확보 및 할루시네이션 원천 차단.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-4">
-                            <div
-                                class="h-32 border border-gray-100 bg-white overflow-hidden group cursor-pointer relative rounded-none sk-border">
-                                <img src="./assets/ai-voc-3.png"
-                                    class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
-                                    alt="Step 3: Dynamic Routing & Respond" />
-                            </div>
-                            <div>
-                                <strong class="text-[#F37321] block mb-1 text-xs font-inter uppercase tracking-widest border-l-2 border-[#F37321] pl-2">[Step 3] Fallback Routing</strong>
-                                <p class="text-[13px] text-gray-400 leading-tight">Bad Keyword 감지 시 휴먼 인 더 루프(Human-in-the-Loop) 우회 로직으로 리스크 100% 방어.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="archive" class="py-24 px-6 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <span class="text-black font-inter font-bold text-[9px] tracking-[0.3em] block mb-3 uppercase">05.
-                    Safety Net</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-black tracking-tighter">대규모 트래픽 운영 안전망(Safety Net)
-                    구축</h2>
-                <p class="text-gray-600 mt-6 max-w-2xl text-sm leading-relaxed font-light">
-                    개인의 꼼꼼함에 의존하는 마케팅은 대규모 트래픽 앞에서 붕괴됩니다. 에러 상황에서의 기민한 대처와 매뉴얼 정립으로 조직 전체의 리스크를 방어합니다.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
-                <div class="cyber-card p-10 bg-white sk-border flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-black tracking-tight">URL 오기입 수습 및 교차 검증(Peer Review) 정착
-                            </h3>
-                            <p class="text-[10px] text-gray-400 font-inter mt-2 uppercase tracking-widest">
-                                Cross-Functional Collaboration</p>
-                        </div>
-                    </div>
-                    <div class="space-y-6 text-sm text-gray-600 font-light leading-relaxed flex-1">
-                        <p><strong
-                                class="text-black font-inter tracking-[0.1em] block mb-2 text-[11px] uppercase">Problem
-                                & Action:</strong> 40여 개 브랜드 동시 운영 중 라이브 메시지 URL 오기입 배포 사고 발생. 패닉 대신 개발팀에 즉각 달려가 'UUID'를
-                            추출 전달하여 조치 시간 최소화. 이후 파트장에게 라이브 전 전사 <strong>'교차 검증(Peer Review)' 프로세스</strong>를 직접 역제안하여
-                            도입.</p>
-                        <p class="pt-4 border-t border-gray-100"><strong class="text-black block mb-2 font-inter tracking-[0.1em] text-[11px] uppercase">Result:</strong>
-                            조직 내 모호한 회색지대(Gray zone)를 시스템적 안전망으로 승화시켜 배포 사고 0건 달성. 대웅헬스케어 내부 유관 조직(마케팅-서비스) 간의 안정적 협업 역량 증명.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6 bg-black text-white text-center">
-        <div class="max-w-4xl mx-auto space-y-12">
-            <span class="font-inter font-bold text-[10px] tracking-[0.5em] text-[#F37321] uppercase opacity-80">DAEWOONG HEALTHCARE B2B SALES CANDIDATE PORTFOLIO</span>
-            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter break-keep">
-                타겟 기업의 니즈를 꿰뚫는 데이터 자동화와 파이프라인 관리로,<br />
-                대웅헬스케어의 실질적인 영업 전환을 이끌어내겠습니다.
-            </h2>
-            <div class="pt-12 flex flex-col md:flex-row items-center justify-center gap-4 relative z-20">
-                <a href="mailto:wkdehdgus0328@gmail.com"
-                    class="group inline-flex items-center justify-center border border-white px-10 py-4 font-inter font-bold text-xs hover:bg-[#F37321] hover:border-[#F37321] hover:text-white transition duration-500 cursor-pointer w-full md:w-auto">
-                    <span class="uppercase tracking-[0.2em] mr-2">Email:</span>
-                    <span class="lowercase tracking-wider">wkdehdgus0328@gmail.com</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/donghyun-jang-2071593b3/" target="_blank"
-                    class="inline-flex items-center justify-center border border-gray-600 text-gray-400 px-10 py-4 font-inter font-bold text-xs tracking-[0.2em] uppercase hover:bg-white hover:border-white hover:text-black transition duration-500 cursor-pointer w-full md:w-auto">
-                    LinkedIn Profile
-                </a>
-            </div>
-            <p class="text-gray-500 font-inter text-[10px] pt-20 tracking-widest uppercase">
-                &copy; 2026 DONGHYUN JANG. DAEWOONG HEALTHCARE B2B SALES CANDIDATE PORTFOLIO.
-            </p>
-        </div>
-    </section>
-
-    <div id="lightbox"
-        class="fixed inset-0 z-[100] bg-white/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-sm">
-        <button id="lightbox-close"
-            class="absolute top-6 right-8 text-black hover:text-gray-500 text-5xl font-light transition">
-            &times;
-        </button>
-        <img id="lightbox-img" src="" alt="Enlarged view"
-            class="max-w-[90%] max-h-[90vh] object-contain border border-gray-100 shadow-none pointer-events-auto" />
-        <p class="text-gray-400 font-inter text-[10px] mt-8 tracking-[0.3em] uppercase">
-            Click to close
-        </p>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const lightbox = document.getElementById("lightbox");
-            const lightboxImg = document.getElementById("lightbox-img");
-            const closeBtn = document.getElementById("lightbox-close");
-
-            document.body.addEventListener("click", (e) => {
-                if (e.target.tagName === "IMG" && e.target.id !== "lightbox-img") {
-                    document.body.style.overflow = "hidden";
-                    lightboxImg.src = e.target.src;
-                    lightbox.classList.remove("hidden");
-                    setTimeout(() => lightbox.classList.remove("opacity-0"), 10);
-                }
-            });
-
-            const closeLightbox = () => {
-                document.body.style.overflow = "auto";
-                lightbox.classList.add("opacity-0");
-                setTimeout(() => {
-                    lightbox.classList.add("hidden");
-                    lightboxImg.src = "";
-                }, 300);
-            };
-
-            closeBtn.addEventListener("click", closeLightbox);
-            lightbox.addEventListener("click", (e) => {
-                if (e.target === lightbox || e.target.tagName === "P")
-                    closeLightbox();
-            });
-            document.addEventListener("keydown", (e) => {
-                if (e.key === "Escape" && !lightbox.classList.contains("hidden"))
-                    closeLightbox();
-            });
-        });
-    </script>
 </body>
-
 </html>
